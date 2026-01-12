@@ -16,6 +16,7 @@ export default function OfficeCTA() {
                 alt="Office Furniture"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                unoptimized
               />
             </div>
           </div>

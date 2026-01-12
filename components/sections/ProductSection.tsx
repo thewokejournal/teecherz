@@ -47,6 +47,7 @@ export default function ProductSection({
                     alt={product.name}
                     fill
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                    unoptimized
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 transition-all duration-300 group-hover:from-gray-300 group-hover:to-gray-400">

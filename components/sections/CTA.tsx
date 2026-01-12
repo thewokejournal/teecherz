@@ -11,10 +11,11 @@ export default function CTA() {
           {/* Image - Left Side */}
           <div className="group order-2 aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 transition-all duration-500 hover:shadow-xl hover:scale-[1.02] lg:order-1">
             <Image
-              src={getShopImagePath("imgi_1_webbanner1-scaled.jpg")}
+              src={getShopImagePath("hero-living-room.jpg")}
               alt="Teecherz Furniture"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
+              unoptimized
             />
           </div>
           {/* Content - Right Side */}

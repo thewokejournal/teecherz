@@ -80,6 +80,7 @@ export default function CategoryShowcase() {
                       alt={category.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      unoptimized
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center transition-transform duration-500 group-hover:scale-110">

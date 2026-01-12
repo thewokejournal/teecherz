@@ -1,15 +1,31 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import Image from "next/image";
+import { getShopImagePath } from "@/utils/imagePath";
 
 export default function Hero() {
   return (
-    <section className="bg-background py-20 sm:py-28 lg:py-36">
-      <Container>
+    <section className="relative bg-background py-20 sm:py-28 lg:py-36 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={getShopImagePath("hero-living-room.jpg")}
+          alt="Teecherz Living Room"
+          fill
+          className="object-cover"
+          priority
+          unoptimized
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+      
+      <Container className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="hero-heading text-foreground">
+          <h1 className="hero-heading text-white drop-shadow-lg">
             Elevate Your Space with Teecherz Furniture
           </h1>
-          <p className="hero-text mt-6 text-foreground/70">
+          <p className="hero-text mt-6 text-white/90 drop-shadow-md">
             Transform your home and office into stylish and comfortable spaces
             with quality furniture designed for modern living.
           </p>
@@ -17,7 +33,7 @@ export default function Hero() {
             <Button href="/shop" variant="primary">
               Shop Collection
             </Button>
-            <Button href="/about" variant="secondary">
+            <Button href="/about" variant="secondary" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-foreground">
               Learn More
             </Button>
           </div>
