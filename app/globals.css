@@ -50,7 +50,7 @@
   --color-secondary: var(--secondary);
   --color-secondary-dark: var(--secondary-dark);
   --color-secondary-light: var(--secondary-light);
-  --font-sans: var(--font-general-sans);
+  --font-sans: 'General Sans', var(--font-inter);
 }
 
 /* General Sans Font Face Declarations */
