@@ -9,11 +9,11 @@ export default function CTA() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="bg-background py-24 sm:py-32 lg:py-40 section-transition">
+    <section className="bg-background py-16 sm:py-24 md:py-32 lg:py-40 section-transition">
       <Container>
         <div
           ref={ref}
-          className={`grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center transition-all duration-1000 ${
+          className={`grid grid-cols-1 gap-10 sm:gap-12 md:gap-16 lg:grid-cols-2 lg:items-center transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
@@ -27,16 +27,16 @@ export default function CTA() {
             />
           </div>
           {/* Content - Right Side */}
-          <div className="order-1 flex flex-col justify-center lg:order-2">
-            <h3 className="section-title text-left text-foreground mb-6">
+          <div className="order-1 flex flex-col justify-center lg:order-2 px-2 sm:px-0">
+            <h3 className="section-title text-left text-foreground mb-4 sm:mb-6">
               Create Your Dream Space
             </h3>
-            <p className="text-body-large text-foreground/70 mb-10">
+            <p className="text-body-large text-foreground/70 mb-6 sm:mb-8 md:mb-10">
               Transform your living space into a personalized oasis with our
               wide selection of furniture and decor for every room.
             </p>
             <div>
-              <Button href="/shop" variant="primary">
+              <Button href="/shop" variant="primary" className="w-full sm:w-auto min-h-[48px] touch-manipulation">
                 Shop Now
               </Button>
             </div>

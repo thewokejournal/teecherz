@@ -26,7 +26,7 @@ export default function SectionHeader({
   return (
     <div
       ref={ref}
-      className={`mb-16 ${alignClasses[align]} ${className} ${
+      className={`mb-10 sm:mb-12 md:mb-16 ${alignClasses[align]} ${className} ${
         isVisible ? "fade-in-on-scroll visible" : "fade-in-on-scroll"
       }`}
     >
@@ -35,11 +35,11 @@ export default function SectionHeader({
           {subtitle}
         </p>
       )}
-      <h2 className="section-title text-foreground mt-4 mb-8">
+      <h2 className="section-title text-foreground mt-3 sm:mt-4 mb-6 sm:mb-8 px-2 sm:px-0">
         {title}
       </h2>
       <div
-        className={`h-0.5 w-16 bg-[#DC2626] transition-all duration-700 ${
+        className={`h-0.5 w-12 sm:w-16 bg-[#DC2626] transition-all duration-700 ${
           align === "center" ? "mx-auto" : align === "right" ? "ml-auto" : ""
         } ${isVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`}
         style={{ transformOrigin: align === "right" ? "right" : align === "left" ? "left" : "center" }}

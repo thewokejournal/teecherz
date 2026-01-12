@@ -42,16 +42,16 @@ export default function Features() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="bg-background py-24 sm:py-32 lg:py-40 section-transition">
+    <section className="bg-background py-16 sm:py-24 md:py-32 lg:py-40 section-transition">
       <Container>
-        <div className="mb-16 text-center">
+        <div className="mb-10 sm:mb-12 md:mb-16 text-center px-2 sm:px-0">
           <h2 className="section-title text-foreground">
             Order now! We're at your Absolute service
           </h2>
         </div>
         <div
           ref={ref}
-          className={`grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 transition-all duration-1000 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >

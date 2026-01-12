@@ -31,20 +31,20 @@ export default function ProductSection({
   };
 
   return (
-    <section className="bg-background py-24 sm:py-32 lg:py-40 section-transition">
+    <section className="bg-background py-16 sm:py-24 md:py-32 lg:py-40 section-transition">
       <Container>
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <h2 className="section-title text-left text-foreground">
             {title}
           </h2>
-          <Button href={shopAllHref} variant="secondary" className="text-sm">
+          <Button href={shopAllHref} variant="secondary" className="text-sm w-full sm:w-auto min-h-[44px] touch-manipulation">
             Shop All
           </Button>
         </div>
 
         <div
           ref={ref}
-          className={`grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 transition-all duration-1000 ${
+          className={`grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
@@ -53,7 +53,7 @@ export default function ProductSection({
               key={product.id}
               href={product.href}
               onClick={handleClick}
-              className="group flex flex-col transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] touch-manipulation"
               style={{
                 transitionDelay: `${index * 50}ms`,
               }}

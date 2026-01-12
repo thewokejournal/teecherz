@@ -105,7 +105,7 @@ export default function ProductGrid() {
               key={product.id}
               href={product.href}
               onClick={handleClick}
-              className="group flex flex-col transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] touch-manipulation"
               style={{
                 transitionDelay: `${index * 50}ms`,
               }}

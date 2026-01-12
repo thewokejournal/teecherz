@@ -162,26 +162,52 @@ a, button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Mobile-First Optimizations */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure minimum touch target size (44x44px) */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile-specific spacing */
+  .mobile-spacing {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* Premium image loading state */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
-/* Typography System - Matching Lanima Template Exactly */
+/* Typography System - Mobile-First Premium Design */
 
-/* Hero Typography - Matching Lanima */
+/* Hero Typography - Optimized for Mobile */
 .hero-heading {
-  font-size: clamp(2.75rem, 5.5vw, 5rem);
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
+@media (min-width: 640px) {
+  .hero-heading {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+  }
+}
+
 .hero-text {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
+  font-size: clamp(0.9375rem, 4vw, 1.25rem);
+  line-height: 1.65;
   font-weight: 400;
   letter-spacing: 0;
   max-width: 42rem;
@@ -202,11 +228,17 @@ img {
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 6vw, 3rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
 }
 
 /* Category Cards - Matching Lanima */
@@ -220,11 +252,17 @@ img {
 }
 
 .category-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 5vw, 2rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .category-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
 }
 
 /* Product Cards - Matching Lanima */

@@ -12,9 +12,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <Container>
-        <div className="py-16">
+        <div className="py-12 sm:py-16">
           {/* Top Section: Logo + Social Icons */}
-          <div className="mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">
+          <div className="mb-10 sm:mb-12 flex flex-col items-center justify-between gap-6 md:flex-row">
             <Logo showText={true} className="text-white" />
             <div className="flex space-x-4">
                 <a
@@ -61,7 +61,7 @@ export default function Footer() {
             </div>
 
           {/* Main Footer Content: Newsletter + 3 Columns */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-4">
             {/* Newsletter Column */}
             <div className="space-y-4">
               <h3 className="footer-heading text-white">
@@ -78,7 +78,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-[#DC2626] px-4 py-2 text-sm font-medium text-white transition-all duration-500 hover:bg-[#B91C1C] hover:scale-105 hover:shadow-lg hover:shadow-[#DC2626]/30"
+                  className="w-full rounded-full bg-[#DC2626] px-4 py-3 text-sm font-medium text-white transition-all duration-500 hover:bg-[#B91C1C] hover:scale-105 hover:shadow-lg hover:shadow-[#DC2626]/30 min-h-[44px] touch-manipulation"
                 >
                   Subscribe
                 </button>

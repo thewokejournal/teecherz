@@ -55,11 +55,11 @@ export default function CategoryShowcase() {
   };
 
   return (
-    <section className="bg-background py-24 sm:py-32 lg:py-40 section-transition">
+    <section className="bg-background py-16 sm:py-24 md:py-32 lg:py-40 section-transition">
       <Container>
         <div
           ref={ref}
-          className={`grid grid-cols-1 gap-10 md:grid-cols-3 transition-all duration-1000 ${
+          className={`grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 md:grid-cols-3 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
@@ -68,13 +68,13 @@ export default function CategoryShowcase() {
               key={index}
               href={category.href}
               onClick={handleClick}
-              className={`group relative flex min-h-[240px] overflow-hidden rounded-2xl transition-all duration-300 ease-in-out hover:shadow-lg md:min-h-[300px] ${colorClasses[category.color]}`}
+              className={`group relative flex min-h-[200px] sm:min-h-[240px] overflow-hidden rounded-xl sm:rounded-2xl transition-all duration-300 ease-in-out active:scale-[0.98] md:min-h-[300px] touch-manipulation ${colorClasses[category.color]}`}
               style={{
                 transitionDelay: `${index * 100}ms`,
               }}
             >
               {/* Text Section - Left */}
-              <div className="relative z-10 flex flex-1 flex-col justify-center p-8 sm:p-10 transition-all duration-300 group-hover:translate-x-1">
+              <div className="relative z-10 flex flex-1 flex-col justify-center p-6 sm:p-8 md:p-10 transition-all duration-300 group-hover:translate-x-1">
                 <p className="category-subtitle mb-3 text-foreground/60 transition-colors duration-300 group-hover:text-foreground/80">
                   {category.subtitle}
                 </p>
