@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "../ui/Container";
 import {
   FreeShippingIcon,
@@ -5,6 +7,7 @@ import {
   Hours24Icon,
   FastDeliveryIcon,
 } from "../ui/Icons";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface Feature {
   icon: React.ReactNode;
@@ -36,24 +39,34 @@ const features: Feature[] = [
 ];
 
 export default function Features() {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="bg-background py-20 sm:py-28 lg:py-32">
+    <section className="bg-background py-24 sm:py-32 lg:py-40">
       <Container>
-        <div className="mb-12 text-center">
+        <div className="mb-16 text-center">
           <h2 className="section-title text-foreground">
             Order now! We're at your Absolute service
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          ref={ref}
+          className={`grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:scale-105"
+              className="group flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-3 hover:scale-105"
+              style={{
+                transitionDelay: `${index * 100}ms`,
+              }}
             >
-              <div className="mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:text-[#DC2626]">
+              <div className="mb-8 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:text-[#DC2626]">
                 {feature.icon}
               </div>
-              <h3 className="mb-3 text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-[#DC2626]">
+              <h3 className="mb-4 text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-[#DC2626]">
                 {feature.title}
               </h3>
               <p className="text-sm leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/90">

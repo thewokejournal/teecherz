@@ -4,6 +4,7 @@ import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
 import { getShopImagePath } from "@/utils/imagePath";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface Product {
   id: string;
@@ -78,28 +79,38 @@ const products: Product[] = [
 ];
 
 export default function ProductGrid() {
+  const { ref, isVisible } = useScrollAnimation();
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     e.stopPropagation();
   };
 
   return (
-    <section className="bg-background py-20 sm:py-28 lg:py-32">
+    <section className="bg-background py-24 sm:py-32 lg:py-40">
       <Container>
         <SectionHeader
           subtitle="RECENTLY RELEASED"
           title="Latest Collection"
         />
 
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((product) => (
+        <div
+          ref={ref}
+          className={`grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          {products.map((product, index) => (
             <a
               key={product.id}
               href={product.href}
               onClick={handleClick}
-              className="group flex flex-col transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col transition-all duration-500 hover:-translate-y-2"
+              style={{
+                transitionDelay: `${index * 50}ms`,
+              }}
             >
-              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-100 shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:shadow-[#DC2626]/10">
                 {product.image ? (
                   <img
                     src={product.image}
@@ -115,11 +126,11 @@ export default function ProductGrid() {
                   </div>
                 )}
               </div>
-              <div className="mt-4 flex flex-col">
+              <div className="mt-5 flex flex-col">
                 <h3 className="product-name text-foreground transition-colors duration-300 group-hover:text-[#DC2626]">
                   {product.name}
                 </h3>
-                <div className="mt-2 flex items-center gap-2">
+                <div className="mt-3 flex items-center gap-3">
                   {product.price && (
                     <p className="product-price text-foreground transition-all duration-300 group-hover:scale-105">
                       {product.price}
@@ -136,7 +147,9 @@ export default function ProductGrid() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className={`mt-16 text-center transition-all duration-1000 delay-500 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}>
           <Button href="/shop" variant="primary">
             View All Products
           </Button>

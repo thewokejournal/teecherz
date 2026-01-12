@@ -4,6 +4,7 @@ import Container from "../ui/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Button from "../ui/Button";
 import { getShopImagePath } from "@/utils/imagePath";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface Product {
   id: string;
@@ -66,25 +67,35 @@ const featuredProducts: Product[] = [
 ];
 
 export default function FeaturedProducts() {
+  const { ref, isVisible } = useScrollAnimation();
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     e.stopPropagation();
   };
 
   return (
-    <section className="bg-background py-20 sm:py-28 lg:py-32">
+    <section className="bg-background py-24 sm:py-32 lg:py-40">
       <Container>
         <SectionHeader subtitle="FEATURED" title="Featured Products" />
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
-          {featuredProducts.map((product) => (
+        <div
+          ref={ref}
+          className={`grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          {featuredProducts.map((product, index) => (
             <a
               key={product.id}
               href={product.href}
               onClick={handleClick}
-              className="group flex flex-col transition-all duration-300 hover:-translate-y-1"
+              className="group flex flex-col transition-all duration-500 hover:-translate-y-2"
+              style={{
+                transitionDelay: `${index * 30}ms`,
+              }}
             >
-              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-100 shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:shadow-[#DC2626]/10">
                 {product.image ? (
                   <img
                     src={product.image}
