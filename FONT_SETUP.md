@@ -3,19 +3,27 @@
 ## Overview
 The website is configured to use **General Sans**, a premium sans-serif font designed by Frode Helland. This font provides a clean, modern, and premium aesthetic perfect for furniture and home decor websites.
 
-## Font Files Required
+## Font Files Status
 
-To use General Sans, you need to add the following font files to the `/public/fonts/` directory:
+✅ **Font files are already in place!**
 
-### Required Files:
-1. `GeneralSans-Regular.woff2` (weight: 400)
-2. `GeneralSans-Regular.woff` (fallback)
-3. `GeneralSans-Medium.woff2` (weight: 500)
-4. `GeneralSans-Medium.woff` (fallback)
-5. `GeneralSans-Semibold.woff2` (weight: 600)
-6. `GeneralSans-Semibold.woff` (fallback)
-7. `GeneralSans-Bold.woff2` (weight: 700)
-8. `GeneralSans-Bold.woff` (fallback)
+The General Sans font files are located in `/public/fonts/general-sans/` directory.
+
+### Current Font Files:
+- `GeneralSans-Regular.otf` (weight: 400, normal)
+- `GeneralSans-Italic.otf` (weight: 400, italic)
+- `GeneralSans-Medium.otf` (weight: 500, normal)
+- `GeneralSans-MediumItalic.otf` (weight: 500, italic)
+- `GeneralSans-Semibold.otf` (weight: 600, normal)
+- `GeneralSans-SemiboldItalic.otf` (weight: 600, italic)
+- `GeneralSans-Bold.otf` (weight: 700, normal)
+- `GeneralSans-BoldItalic.otf` (weight: 700, italic)
+
+### Additional Variants Available:
+- `GeneralSans-Extralight.otf` (weight: 200)
+- `GeneralSans-ExtralightItalic.otf` (weight: 200, italic)
+- `GeneralSans-Light.otf` (weight: 300)
+- `GeneralSans-LightItalic.otf` (weight: 300, italic)
 
 ## Directory Structure
 
@@ -23,36 +31,37 @@ To use General Sans, you need to add the following font files to the `/public/fo
 teecherz-rebuild/
   └── public/
       └── fonts/
-          ├── GeneralSans-Regular.woff2
-          ├── GeneralSans-Regular.woff
-          ├── GeneralSans-Medium.woff2
-          ├── GeneralSans-Medium.woff
-          ├── GeneralSans-Semibold.woff2
-          ├── GeneralSans-Semibold.woff
-          ├── GeneralSans-Bold.woff2
-          └── GeneralSans-Bold.woff
+          └── general-sans/
+              ├── GeneralSans-Regular.otf
+              ├── GeneralSans-Italic.otf
+              ├── GeneralSans-Medium.otf
+              ├── GeneralSans-MediumItalic.otf
+              ├── GeneralSans-Semibold.otf
+              ├── GeneralSans-SemiboldItalic.otf
+              ├── GeneralSans-Bold.otf
+              ├── GeneralSans-BoldItalic.otf
+              └── ... (additional variants)
 ```
 
-## How to Add Font Files
+## Font Configuration
 
-1. **Download General Sans:**
-   - Visit: https://freebiesbug.com/free-fonts/general-sans/
-   - Or search for "General Sans font download"
-   - Ensure you have the commercial license if needed for your project
+✅ **Fonts are configured and ready to use!**
 
-2. **Extract and Convert (if needed):**
-   - If you have TTF/OTF files, convert them to WOFF2 and WOFF formats
-   - Use tools like:
-     - [Transfonter](https://transfonter.org/)
-     - [Font Squirrel Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator)
+The website is now using General Sans font with the following configuration:
 
-3. **Place Files:**
-   - Create the `/public/fonts/` directory if it doesn't exist
-   - Copy all font files to `/public/fonts/`
+- **Format**: OpenType (OTF)
+- **Path**: `/fonts/general-sans/`
+- **Weights**: 400 (Regular), 500 (Medium), 600 (Semibold), 700 (Bold)
+- **Styles**: Normal and Italic variants for all weights
+- **Fallback**: Inter font (via Next.js) if General Sans fails to load
 
-4. **Verify:**
-   - The font will automatically load once files are in place
-   - Inter font will be used as fallback until General Sans files are added
+### Performance Optimization
+
+The fonts use `font-display: swap` which means:
+- Text is immediately visible with fallback font
+- General Sans loads in the background
+- Smooth transition when General Sans is ready
+- No layout shift or invisible text
 
 ## Font Weights Used
 
