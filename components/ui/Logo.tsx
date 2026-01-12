@@ -13,20 +13,20 @@ export default function Logo({ className = "", showText = false }: LogoProps) {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <Link href="/" className={`flex items-center space-x-3 ${className}`}>
+    <Link href="/" className={`group flex items-center space-x-3 transition-all duration-300 hover:scale-105 ${className}`}>
       {/* Logo Image */}
-      <div className="relative h-10 w-10 flex-shrink-0">
+      <div className="relative h-10 w-10 flex-shrink-0 transition-transform duration-300 group-hover:rotate-3">
         {!logoError ? (
           <Image
             src="/logo-1.png"
             alt="Teecherz Home & Office"
             fill
-            className="object-contain"
+            className="object-contain transition-all duration-300 group-hover:brightness-110"
             priority
             onError={() => setLogoError(true)}
           />
         ) : (
-          <div className="flex h-10 w-10 items-center justify-center rounded bg-[#DC2626] text-white font-bold text-lg shadow-lg">
+          <div className="flex h-10 w-10 items-center justify-center rounded bg-[#DC2626] text-white font-bold text-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:shadow-[#DC2626]/30">
             T
           </div>
         )}

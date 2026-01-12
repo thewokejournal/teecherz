@@ -9,9 +9,9 @@ export default function OfficeCTA() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Image Section */}
           <div className="order-2 lg:order-1">
-            <div className="aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200">
-              <div className="flex h-full w-full items-center justify-center">
-                <span className="text-6xl font-bold text-gray-400">
+            <div className="group aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 transition-all duration-500 hover:shadow-xl hover:scale-[1.02]">
+              <div className="flex h-full w-full items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                <span className="text-6xl font-bold text-gray-400 transition-colors duration-300 group-hover:text-gray-600">
                   Office
                 </span>
               </div>
