@@ -1,47 +1,67 @@
 import Link from "next/link";
 import Container from "../ui/Container";
+import Logo from "../ui/Logo";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-foreground/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-foreground">Teecherz</span>
-          </Link>
+          <Logo />
 
-          <nav className="hidden items-center space-x-8 md:flex">
+          <nav className="hidden items-center space-x-6 lg:space-x-8 md:flex">
             <Link
-              href="/"
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              href="/?product_cat=bedroom-furniture"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
             >
-              Home
+              Bedroom
             </Link>
             <Link
-              href="/about"
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              href="/product-category/living-room"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
             >
-              About
+              Living Room
             </Link>
             <Link
-              href="/courses"
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              href="/?product_cat=dining-room-furniture"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
             >
-              Courses
+              Dining
             </Link>
             <Link
-              href="/blog"
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              href="/?product_cat=electronics"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
             >
-              Blog
+              Electronics
             </Link>
             <Link
-              href="/contact"
-              className="text-sm font-medium text-foreground/70 transition-colors hover:text-foreground"
+              href="/?product_cat=kitchen-appliances"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
             >
-              Contact
+              Kitchen
+            </Link>
+            <Link
+              href="/?product_cat=office-furniture"
+              className="text-sm font-semibold uppercase tracking-wide text-foreground/80 transition-colors hover:text-[#DC2626]"
+            >
+              Office
             </Link>
           </nav>
+
+          <div className="hidden items-center space-x-4 md:flex">
+            <Link
+              href="/my-account"
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-[#DC2626]"
+            >
+              My Account
+            </Link>
+            <Link
+              href="https://creditfacility.teecherz.com"
+              className="text-sm font-medium text-foreground/70 transition-colors hover:text-[#DC2626]"
+            >
+              Credit Facility
+            </Link>
+          </div>
 
           <div className="flex items-center space-x-4">
             <button

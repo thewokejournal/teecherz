@@ -1,13 +1,55 @@
 @import "tailwindcss";
 
+/**
+ * Teecherz Brand Color Palette
+ * 
+ * TODO: Update these colors with actual Teecherz brand colors
+ * Use COLOR_PALETTE_GUIDE.md for instructions on extracting colors
+ */
+
 :root {
+  /* Base Colors */
   --background: #ffffff;
   --foreground: #0a0a0a;
+  
+  /* Primary Brand Colors - Teecherz Red from Logo */
+  --primary: #DC2626; /* Vibrant red from Teecherz logo */
+  --primary-dark: #B91C1C; /* Darker red for hover states */
+  --primary-light: #EF4444; /* Lighter red for backgrounds */
+  --primary-glow: #FCA5A5; /* Subtle red glow effect */
+  
+  /* Secondary Colors - UPDATE THESE */
+  --secondary: #dfc394; /* Placeholder - update with actual secondary */
+  --secondary-dark: #b89a6f; /* Placeholder */
+  --secondary-light: #f5e4c4; /* Placeholder */
+  
+  /* Category Card Colors - Using Teecherz red variations */
+  --category-blue: #3b82f6; /* Dining Room - keep blue for contrast */
+  --category-orange: #f97316; /* Living Room - keep orange for contrast */
+  --category-gray: #6b7280; /* Bedroom - keep gray for contrast */
+  --category-red: #DC2626; /* Office - use Teecherz red */
+  
+  /* Text Colors */
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-inverse: #ffffff;
+  
+  /* Border Colors */
+  --border-default: #e5e7eb;
+  --border-light: #f3f4f6;
+  --border-dark: #d1d5db;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-light: var(--secondary-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

@@ -1,27 +1,29 @@
 import Link from "next/link";
 import Container from "../ui/Container";
+import Logo from "../ui/Logo";
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-gray-900 text-white">
       <Container>
         <div className="py-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Brand Column */}
             <div className="space-y-4">
-              <Link href="/" className="text-2xl font-bold">
-                Teecherz
-              </Link>
-              <p className="text-sm text-background/70">
-                Empowering educators and learners with innovative teaching
-                solutions.
+              <Logo showText={true} className="text-white" />
+              <p className="text-sm text-gray-300">
+                Quality furniture for your home and office. 25+ years of
+                trusted service with over 20 branches nationwide.
+              </p>
+              <p className="text-sm font-semibold text-[#DC2626]">
+                Welcome To Absolute Service
               </p>
               <div className="flex space-x-4">
                 <a
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 transition-colors hover:text-background"
+                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
                   aria-label="Twitter"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -32,7 +34,7 @@ export default function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 transition-colors hover:text-background"
+                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
                   aria-label="Facebook"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +45,7 @@ export default function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-background/70 transition-colors hover:text-background"
+                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
                   aria-label="Instagram"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -55,106 +57,155 @@ export default function Footer() {
 
             {/* Company Column */}
             <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
                 Company
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/about"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
+                    href="/about-teecherz-home-and-office"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
                   >
-                    About
+                    About Teecherz
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/courses"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
+                    href="/general-disclaimer"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
                   >
-                    Courses
+                    General Disclaimer
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Support Column */}
-            <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-                Support
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/help"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
-                  >
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
+                    href="/privacy-policy-2"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
                   >
                     Privacy Policy
                   </Link>
                 </li>
+              </ul>
+            </div>
+
+            {/* Customer Column */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                Customer
+              </h3>
+              <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/terms"
-                    className="text-sm text-background/70 transition-colors hover:text-background"
+                    href="/product-warranty"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
                   >
-                    Terms of Service
+                    Product Warranty
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/faq"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                  >
+                    FAQ
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Newsletter Column */}
+            {/* Useful Info Column */}
             <div>
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider">
-                Newsletter
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                Useful Info
               </h3>
-              <p className="mb-4 text-sm text-background/70">
-                Stay connected with us and never miss an update.
-              </p>
-              <form className="space-y-2">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full rounded-full border border-background/20 bg-background/10 px-4 py-2 text-sm text-background placeholder:text-background/50 focus:border-background/50 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full rounded-full bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background/90"
-                >
-                  Subscribe
-                </button>
-              </form>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/branch-network"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                  >
+                    Branch Network
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/purchase-options-and-services"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                  >
+                    Purchase Options & Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/our-covid-19-response"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                  >
+                    Covid 19 Response
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/downloads"
+                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                  >
+                    Downloads
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Column */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+                Contact
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <p className="text-sm text-gray-300">
+                    <span className="font-medium">General Information:</span>
+                    <br />
+                    <a
+                      href="mailto:info@teecherz.com"
+                      className="text-[#DC2626] hover:underline"
+                    >
+                      info@teecherz.com
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <p className="text-sm text-gray-300">
+                    <span className="font-medium">Help:</span>
+                    <br />
+                    <a
+                      href="mailto:help@teecherz.com"
+                      className="text-[#DC2626] hover:underline"
+                    >
+                      help@teecherz.com
+                    </a>
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div className="mt-12 border-t border-background/20 pt-8 text-center text-sm text-background/70">
-            <p>
-              © {new Date().getFullYear()} Teecherz. All rights reserved.
-            </p>
+          <div className="mt-12 border-t border-gray-700 pt-8">
+            <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-400 md:flex-row">
+              <p>
+                © {new Date().getFullYear()} Teecherz Home & Office. All Rights
+                Reserved
+              </p>
+              <p>
+                Developed by{" "}
+                <a
+                  href="https://www.techdweto.co.zw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#DC2626] hover:underline"
+                >
+                  Techdweto Inc.
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </Container>

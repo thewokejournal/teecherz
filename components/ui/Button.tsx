@@ -23,9 +23,9 @@ export default function Button({
 
   const variantStyles = {
     primary:
-      "bg-foreground text-background hover:bg-foreground/90 focus:ring-foreground",
+      "bg-[#DC2626] text-white hover:bg-[#B91C1C] focus:ring-[#DC2626] shadow-lg hover:shadow-xl transition-all duration-200",
     secondary:
-      "bg-transparent border-2 border-foreground text-foreground hover:bg-foreground hover:text-background focus:ring-foreground",
+      "bg-transparent border-2 border-[#DC2626] text-[#DC2626] hover:bg-[#DC2626] hover:text-white focus:ring-[#DC2626] transition-all duration-200",
   };
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`;

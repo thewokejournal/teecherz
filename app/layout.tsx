@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Teecherz - Elevate Your Teaching",
+  title: "Teecherz Home & Office - Quality Furniture in Zimbabwe",
   description:
-    "Transform your educational approach with innovative tools and resources designed for modern educators.",
+    "Transform your home and office with quality furniture. 25+ years of trusted service. Free delivery, easy returns, multiple payment options.",
 };
 
 export default function RootLayout({

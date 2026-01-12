@@ -14,55 +14,55 @@ interface Product {
 const products: Product[] = [
   {
     id: "1",
-    name: "Advanced Teaching Methods",
-    price: "$99",
-    originalPrice: "$149",
-    href: "/courses/advanced-teaching",
+    name: "Modern Sofa Set",
+    price: "$899",
+    originalPrice: "$1,199",
+    href: "/products/modern-sofa",
   },
   {
     id: "2",
-    name: "Digital Classroom Management",
-    price: "$79",
-    href: "/courses/digital-classroom",
+    name: "Dining Table Set",
+    price: "$649",
+    href: "/products/dining-table",
   },
   {
     id: "3",
-    name: "Student Engagement Strategies",
-    price: "$89",
-    originalPrice: "$119",
-    href: "/courses/engagement",
+    name: "Bedroom Suite",
+    price: "$1,299",
+    originalPrice: "$1,599",
+    href: "/products/bedroom-suite",
   },
   {
     id: "4",
-    name: "Assessment & Evaluation",
-    price: "$69",
-    href: "/courses/assessment",
+    name: "Office Desk",
+    price: "$449",
+    href: "/products/office-desk",
   },
   {
     id: "5",
-    name: "Curriculum Design",
-    price: "$109",
-    originalPrice: "$139",
-    href: "/courses/curriculum",
+    name: "Coffee Table",
+    price: "$299",
+    originalPrice: "$399",
+    href: "/products/coffee-table",
   },
   {
     id: "6",
-    name: "Educational Technology",
-    price: "$94",
-    href: "/courses/edtech",
+    name: "Wardrobe",
+    price: "$799",
+    href: "/products/wardrobe",
   },
   {
     id: "7",
-    name: "Special Needs Education",
-    price: "$84",
-    href: "/courses/special-needs",
+    name: "Dining Chairs Set",
+    price: "$349",
+    href: "/products/dining-chairs",
   },
   {
     id: "8",
-    name: "Professional Development",
-    price: "$119",
-    originalPrice: "$149",
-    href: "/courses/professional-dev",
+    name: "Bookshelf",
+    price: "$249",
+    originalPrice: "$329",
+    href: "/products/bookshelf",
   },
 ];
 
@@ -71,8 +71,8 @@ export default function ProductGrid() {
     <section className="bg-background py-16 sm:py-24">
       <Container>
         <SectionHeader
-          subtitle="RECENTLY RELEASED"
-          title="Latest Courses"
+          subtitle="FEATURED PRODUCTS"
+          title="Latest Collection"
         />
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -119,8 +119,8 @@ export default function ProductGrid() {
         </div>
 
         <div className="mt-12 text-center">
-          <Button href="/courses" variant="primary">
-            View All Courses
+          <Button href="/shop" variant="primary">
+            View All Products
           </Button>
         </div>
       </Container>

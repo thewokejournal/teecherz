@@ -1,0 +1,102 @@
+import Container from "../ui/Container";
+import SectionHeader from "../ui/SectionHeader";
+import Button from "../ui/Button";
+import Image from "next/image";
+
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  image?: string;
+  href: string;
+}
+
+const featuredProducts: Product[] = [
+  {
+    id: "1",
+    name: "Cushion Green",
+    price: "USD 7.00",
+    href: "/product/cushion-green",
+  },
+  {
+    id: "2",
+    name: "Cushion Picky",
+    price: "USD 7.00",
+    href: "/product/cushion-picky",
+  },
+  {
+    id: "3",
+    name: "Cushion Red",
+    price: "USD 7.00",
+    href: "/product/cushion-red",
+  },
+  {
+    id: "4",
+    name: "Cushion Lefy",
+    price: "USD 7.00",
+    href: "/product/cushion-lefy",
+  },
+  {
+    id: "5",
+    name: "Cushion Red stripe",
+    price: "USD 7.00",
+    href: "/product/cushion-red-stripe",
+  },
+  {
+    id: "6",
+    name: "Cushion Galaxy Blue",
+    price: "USD 7.00",
+    href: "/product/cushion-galaxy-blue",
+  },
+  {
+    id: "7",
+    name: "Bunk Bed (Pine)",
+    price: "USD 350.00",
+    href: "/product/bunk-bed-pine",
+  },
+];
+
+export default function FeaturedProducts() {
+  return (
+    <section className="bg-background py-16 sm:py-24">
+      <Container>
+        <SectionHeader subtitle="FEATURED" title="Featured Products" />
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
+          {featuredProducts.map((product) => (
+            <a
+              key={product.id}
+              href={product.href}
+              className="group flex flex-col"
+            >
+              <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-100">
+                {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                    <span className="text-2xl font-bold text-gray-400">
+                      {product.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="mt-3 flex flex-col">
+                <h3 className="text-sm font-semibold text-foreground group-hover:text-[#DC2626] transition-colors line-clamp-2">
+                  {product.name}
+                </h3>
+                <p className="mt-1 text-sm font-semibold text-foreground">
+                  {product.price}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}

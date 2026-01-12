@@ -15,15 +15,15 @@ export default function CTA() {
           </div>
           <div className="flex flex-col justify-center">
             <h3 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Create Your Learning Journey
+              Create Your Dream Space
             </h3>
             <p className="mt-6 text-lg leading-8 text-foreground/70">
-              Transform your teaching career with our comprehensive selection of
-              courses and resources designed for modern educators.
+              Transform your living space into a personalized oasis with our
+              wide selection of furniture and decor for every room.
             </p>
             <div className="mt-10">
-              <Button href="/courses" variant="primary">
-                Get Started
+              <Button href="/shop" variant="primary">
+                Shop Now
               </Button>
             </div>
           </div>
