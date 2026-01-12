@@ -15,7 +15,7 @@ export default function Footer() {
                   href="https://twitter.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:scale-125"
                   aria-label="Twitter"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +26,7 @@ export default function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:scale-125"
                   aria-label="Facebook"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:scale-125"
                   aria-label="Instagram"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export default function Footer() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:scale-125"
                   aria-label="YouTube"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-[#DC2626] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[#B91C1C]"
+                  className="w-full rounded-full bg-[#DC2626] px-4 py-2 text-sm font-medium text-white transition-all duration-500 hover:bg-[#B91C1C] hover:scale-105 hover:shadow-lg hover:shadow-[#DC2626]/30"
                 >
                   Subscribe
                 </button>
@@ -98,13 +98,13 @@ export default function Footer() {
               <div className="space-y-2">
                 <a
                   href="tel:+263242123456"
-                  className="footer-link block text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="footer-link block text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                 >
                   +263 242 123 456
                 </a>
                 <a
                   href="mailto:info@teecherz.com"
-                  className="footer-link block text-gray-300 transition-colors hover:text-[#DC2626]"
+                  className="footer-link block text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                 >
                   info@teecherz.com
                 </a>
@@ -123,7 +123,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about-teecherz-home-and-office"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     About Teecherz
                   </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/general-disclaimer"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     General Disclaimer
                   </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy-2"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Privacy Policy
                   </Link>
@@ -156,7 +156,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/product-warranty"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Product Warranty
                   </Link>
@@ -164,7 +164,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faq"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     FAQ
                   </Link>
@@ -181,7 +181,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/branch-network"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Branch Network
                   </Link>
@@ -189,7 +189,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/purchase-options-and-services"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Purchase Options & Services
                   </Link>
@@ -197,7 +197,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/our-covid-19-response"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Covid 19 Response
                   </Link>
@@ -205,7 +205,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/downloads"
-                    className="text-sm text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="text-sm text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Downloads
                   </Link>
@@ -220,7 +220,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faq"
-                    className="footer-link text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="footer-link text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Help & Faq's
                   </Link>
@@ -228,7 +228,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy-2"
-                    className="footer-link text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="footer-link text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Privacy Policy
                   </Link>
@@ -236,7 +236,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/product-warranty"
-                    className="footer-link text-gray-300 transition-colors hover:text-[#DC2626]"
+                    className="footer-link text-gray-300 transition-all duration-500 hover:text-[#DC2626] hover:translate-x-1"
                   >
                     Return Policy
                   </Link>

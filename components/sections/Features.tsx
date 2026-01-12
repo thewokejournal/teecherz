@@ -48,15 +48,15 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center"
+              className="group flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:scale-105"
             >
-              <div className="mb-6 flex items-center justify-center">
+              <div className="mb-6 flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:text-[#DC2626]">
                 {feature.icon}
               </div>
-              <h3 className="mb-3 text-lg font-semibold text-foreground">
+              <h3 className="mb-3 text-lg font-semibold text-foreground transition-colors duration-300 group-hover:text-[#DC2626]">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed text-foreground/70">
+              <p className="text-sm leading-relaxed text-foreground/70 transition-colors duration-300 group-hover:text-foreground/90">
                 {feature.description}
               </p>
             </div>
