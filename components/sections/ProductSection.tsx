@@ -38,30 +38,30 @@ export default function ProductSection({
             <a
               key={product.id}
               href={product.href}
-              className="group flex flex-col"
+              className="group flex flex-col transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-100">
+              <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
                 {product.image ? (
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
-                    <span className="text-4xl font-bold text-gray-400">
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 transition-all duration-300 group-hover:from-gray-300 group-hover:to-gray-400">
+                    <span className="text-4xl font-bold text-gray-400 transition-all duration-300 group-hover:scale-110 group-hover:text-gray-600">
                       {product.name.charAt(0)}
                     </span>
                   </div>
                 )}
               </div>
               <div className="mt-4 flex flex-col">
-                <h3 className="product-name text-foreground group-hover:text-[#DC2626] transition-colors">
+                <h3 className="product-name text-foreground transition-colors duration-300 group-hover:text-[#DC2626]">
                   {product.name}
                 </h3>
                 {product.price && (
-                  <p className="product-price mt-2 text-foreground">
+                  <p className="product-price mt-2 text-foreground transition-all duration-300 group-hover:scale-105">
                     {product.price}
                   </p>
                 )}
