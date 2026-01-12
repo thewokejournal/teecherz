@@ -18,12 +18,14 @@ const products: Product[] = [
     price: "$899",
     originalPrice: "$1,199",
     href: "/products/modern-sofa",
+    image: "/Shop - Teecherz Home & Office/imgi_32_sofa-980x980.jpg",
   },
   {
     id: "2",
     name: "Dining Table Set",
     price: "$649",
     href: "/products/dining-table",
+    image: "/Shop - Teecherz Home & Office/imgi_9_gir.jpg",
   },
   {
     id: "3",
@@ -31,12 +33,14 @@ const products: Product[] = [
     price: "$1,299",
     originalPrice: "$1,599",
     href: "/products/bedroom-suite",
+    image: "/Shop - Teecherz Home & Office/imgi_34_bedroom-980x980.jpg",
   },
   {
     id: "4",
     name: "Office Desk",
     price: "$449",
     href: "/products/office-desk",
+    image: "/Shop - Teecherz Home & Office/imgi_26_o.jpg3_.jpg",
   },
   {
     id: "5",
@@ -44,18 +48,21 @@ const products: Product[] = [
     price: "$299",
     originalPrice: "$399",
     href: "/products/coffee-table",
+    image: "/Shop - Teecherz Home & Office/imgi_33_lounge-980x980.jpg",
   },
   {
     id: "6",
     name: "Wardrobe",
     price: "$799",
     href: "/products/wardrobe",
+    image: "/Shop - Teecherz Home & Office/imgi_35_suite-980x980.jpg",
   },
   {
     id: "7",
     name: "Dining Chairs Set",
     price: "$349",
     href: "/products/dining-chairs",
+    image: "/Shop - Teecherz Home & Office/imgi_11_harvard.jpg",
   },
   {
     id: "8",
@@ -63,6 +70,7 @@ const products: Product[] = [
     price: "$249",
     originalPrice: "$329",
     href: "/products/bookshelf",
+    image: "/Shop - Teecherz Home & Office/imgi_27_office5.jpg3_.jpg",
   },
 ];
 
