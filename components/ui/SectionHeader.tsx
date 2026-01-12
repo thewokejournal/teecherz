@@ -31,15 +31,15 @@ export default function SectionHeader({
       }`}
     >
       {subtitle && (
-        <p className="section-subtitle text-foreground/60">
+        <p className="section-subtitle">
           {subtitle}
         </p>
       )}
-      <h2 className="section-title text-foreground mt-2">
+      <h2 className="section-title text-foreground mt-4 mb-8">
         {title}
       </h2>
       <div
-        className={`mt-8 h-0.5 w-20 bg-[#DC2626] transition-all duration-700 ${
+        className={`h-0.5 w-16 bg-[#DC2626] transition-all duration-700 ${
           align === "center" ? "mx-auto" : align === "right" ? "ml-auto" : ""
         } ${isVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"}`}
         style={{ transformOrigin: align === "right" ? "right" : align === "left" ? "left" : "center" }}
