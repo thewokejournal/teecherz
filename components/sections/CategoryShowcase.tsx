@@ -16,6 +16,7 @@ const categories: Category[] = [
     tagline: "Memorable Moments with Family",
     href: "/categories/dining-room",
     color: "blue",
+    image: "/Shop - Teecherz Home & Office/imgi_9_gir.jpg",
   },
   {
     title: "Living Room",
@@ -23,6 +24,7 @@ const categories: Category[] = [
     tagline: "Comfort beyond your needs",
     href: "/categories/living-room",
     color: "orange",
+    image: "/Shop - Teecherz Home & Office/imgi_33_lounge-980x980.jpg",
   },
   {
     title: "Bedroom Suites",
@@ -30,6 +32,7 @@ const categories: Category[] = [
     tagline: "Timeless Elegance",
     href: "/categories/bedroom",
     color: "grey",
+    image: "/Shop - Teecherz Home & Office/imgi_34_bedroom-980x980.jpg",
   },
 ];
 
