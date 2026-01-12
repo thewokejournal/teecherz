@@ -1,5 +1,6 @@
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import Image from "next/image";
 
 export default function CTA() {
   return (
@@ -8,11 +9,12 @@ export default function CTA() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Image - Left Side */}
           <div className="group order-2 aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 transition-all duration-500 hover:shadow-xl hover:scale-[1.02] lg:order-1">
-            <div className="flex h-full w-full items-center justify-center transition-transform duration-500 group-hover:scale-110">
-              <span className="text-6xl font-bold text-gray-400 transition-colors duration-300 group-hover:text-gray-600">
-                Teecherz
-              </span>
-            </div>
+            <Image
+              src="/Shop - Teecherz Home & Office/imgi_1_webbanner1-scaled.jpg"
+              alt="Teecherz Furniture"
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+            />
           </div>
           {/* Content - Right Side */}
           <div className="order-1 flex flex-col justify-center lg:order-2">
