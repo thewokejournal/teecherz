@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload critical fonts */}
+        {/* Preload critical fonts for static site */}
         <link
           rel="preload"
           href="/fonts/general-sans/GeneralSans-Regular.otf"
