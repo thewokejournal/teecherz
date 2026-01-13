@@ -132,12 +132,12 @@ body {
 /* Smooth scrolling with premium feel */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 112px; /* Updated for taller header (h-28 = 7rem = 112px) */
 }
 
 /* Enhanced scroll performance */
 * {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 112px; /* Updated for taller header */
 }
 
 /* Premium visual enhancements */
