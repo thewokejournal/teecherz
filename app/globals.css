@@ -50,7 +50,7 @@
   --color-secondary: var(--secondary);
   --color-secondary-dark: var(--secondary-dark);
   --color-secondary-light: var(--secondary-light);
-  --font-sans: 'General Sans', var(--font-inter);
+  --font-sans: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* General Sans Font Face Declarations */

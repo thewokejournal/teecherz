@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Inter as fallback font
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
+// Removed Google Fonts import - using local fonts only for faster load
+// Inter will fallback to system fonts if General Sans fails
 
 export const metadata: Metadata = {
   title: "Teecherz Home & Office - Quality Furniture in Zimbabwe",
@@ -23,33 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Preload critical fonts for static site */}
-        <link
-          rel="preload"
-          href="/fonts/general-sans/GeneralSans-Regular.otf"
-          as="font"
-          type="font/otf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/general-sans/GeneralSans-Medium.otf"
-          as="font"
-          type="font/otf"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/general-sans/GeneralSans-Semibold.otf"
-          as="font"
-          type="font/otf"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body
-        className={`${inter.variable} font-sans antialiased`}
-        style={{ fontFamily: "'General Sans', var(--font-inter), sans-serif" }}
+        className="font-sans antialiased"
+        style={{ fontFamily: "'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" }}
       >
         {children}
       </body>
